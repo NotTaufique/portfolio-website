@@ -33,7 +33,7 @@ const Experience = () => {
       id="experience"
       className="  scroll-mt-28 mb-28 sm:mb-40"
     >
-      <SectionHeading>Our experience</SectionHeading>
+      <SectionHeading>Our Services</SectionHeading>
       <VerticalTimeline lineColor="" animate>
         {experiencesData.map((item, index) => (
           <React.Fragment key={index}>
@@ -48,7 +48,7 @@ const Experience = () => {
                 textAlign: "left",
                 padding: "1.3rem 2rem",
               }}
-              date={item.date}
+              // date={item.date}
               icon={item.icon}
               contentArrowStyle={{
                 borderRight:
@@ -63,7 +63,7 @@ const Experience = () => {
               }}
             >
               <h3 className="font-semibold capitalize">{item.title}</h3>
-              <p className="font-normal !mt-0">{item.location}</p>
+              {/* <p className="font-normal !mt-0">{item.location}</p> */}
               <p className="!mt-1 !font-normal dark:text-white/75 text-gray-700">
                 {item.description}
               </p>

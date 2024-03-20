@@ -2,9 +2,12 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import project1 from "@/public/project1.png";
+import project2 from "@/public/project2.png";
+import project3 from "@/public/project3.png";
+import { BsBrowserSafari } from "react-icons/bs";
+import { BiSupport } from "react-icons/bi";
+import { FaMoneyBillTrendUp } from "react-icons/fa6";
 
 export const links = [
   {
@@ -35,52 +38,50 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Website Design and Development",
+    // location: "Miami, FL",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2019",
+      "Craft visually appealing, user-friendly websites tailored to meet your unique business needs.",
+    icon: React.createElement(BsBrowserSafari),
+    // date: "2019",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "Website Maintenance and Support",
+    // location: "Orlando, FL",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+      "Ensure your website remains secure, up-to-date, and optimized for peak performance with our website maintenance and support services.",
+    icon: React.createElement(BiSupport),
+    // date: "2019 - 2021",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "Digital Marketing",
+    // location: "Houston, TX",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+      "Elevate your online visibility and attract more customers with our comprehensive digital marketing strategies. From search engine optimization (SEO) and pay-per-click (PPC) advertising to social media marketing and content creation",
+    icon: React.createElement(FaMoneyBillTrendUp),
+    // date: "2021 - present",
   },
 ] as const;
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Brainwave",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
+      "Modern UI/UX website. Its sleek design, seamless animations, and overall user experience set a high standard, serving as a future modern applications",
     tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+    imageUrl: project1,
   },
   {
-    title: "rmtDev",
-    description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
+    title: "Gericht",
+    description: "Modern Restaurant Landing Page",
     tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+    imageUrl: project2,
   },
   {
-    title: "Word Analytics",
-    description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
+    title: "HooBank",
+    description: "Modern UI/UX Bank Landing Page",
     tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+    imageUrl: project3,
   },
 ] as const;
 

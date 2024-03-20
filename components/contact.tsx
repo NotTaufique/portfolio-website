@@ -7,6 +7,11 @@ import { motion } from "framer-motion";
 import { useActiveSectionContext } from "@/context/active-content-section";
 import { useInView } from "react-intersection-observer";
 import { sendEmail } from "@/actions/sendEmail";
+import toast, { Toaster } from "react-hot-toast";
+
+const notify = () => {
+  toast.success("Thanks for contacting Us!");
+};
 
 const Contact = () => {
   const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
@@ -40,9 +45,9 @@ const Contact = () => {
     >
       <SectionHeading>Contact us</SectionHeading>
       <p className="dark:text-white/80 text-gray-700 -mt-5">
-        Please contact me directy at{" "}
+        Please contact us directy at{" "}
         <a className="underline" href="mailto:example@gmail.com">
-          example@gmail.com
+          theagencycube@gmail.com
         </a>{" "}
         or through this form{" "}
       </p>
@@ -51,7 +56,13 @@ const Contact = () => {
         className="mt-10 flex flex-col dark:text-black"
         action={async (formData) => {
           await sendEmail(formData);
+          const form = document.getElementById("emailform") as HTMLFormElement;
+          if (form) {
+            form.reset();
+            notify();
+          }
         }}
+        id="emailform"
       >
         <input
           type="email"
@@ -76,6 +87,7 @@ const Contact = () => {
           <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1 focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105" />{" "}
         </button>
       </form>
+      <Toaster />
     </motion.section>
   );
 };

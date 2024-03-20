@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
-import { FaGithubSquare } from "react-icons/fa";
+import { FaFacebook, FaGithubSquare, FaInstagram } from "react-icons/fa";
 import { useActiveSectionContext } from "@/context/active-content-section";
 import { useInView } from "react-intersection-observer";
 const Intro = () => {
@@ -44,17 +44,29 @@ const Intro = () => {
               duration: 0.2,
             }}
           >
-            <Image
-              src="https://plus.unsplash.com/premium_photo-1671656349322-41de944d259b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHByb2ZpbGUlMjBwaWN0dXJlfGVufDB8fDB8fHww"
+            {/* <Image
+              src={"/cube.gif"}
               alt="The Cube Agency"
               width="192"
               height="192"
               quality="95"
               priority={true}
               className="h-24 w-24 rounded-full border-[0.5rem] border-white object-cover shadow-xl"
-            />
+            /> */}
+            <video
+              autoPlay
+              muted
+              loop
+              style={{
+                width: "200px",
+                height: "200px",
+              }}
+              className="h-24 w-24 rounded-full border-[0.3rem] border-white object-cover shadow-xl"
+            >
+              <source src="/cube.mp4" />
+            </video>
           </motion.div>
-          <motion.span
+          {/* <motion.span
             className="text-4xl absolute bottom-0 right-0"
             initial={{
               opacity: 0,
@@ -72,11 +84,11 @@ const Intro = () => {
             }}
           >
             👋
-          </motion.span>
+          </motion.span> */}
         </div>
       </div>
       <motion.h1
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl text-ce"
+        className="mb-7 mt-4 px-4 text-lg font-medium !leading-[1.5] sm:text-4xl text-ce"
         initial={{
           opacity: 0,
           y: 100,
@@ -86,14 +98,23 @@ const Intro = () => {
           y: 0,
         }}
       >
-        <span className="font-bold">
-          Hello, We are{" "}
-          <span className="font-extrabold underline">The Cube Agency</span>{" "}
-        </span>{" "}
-        We are <span className="font-bold">full-stack developer's</span> with{" "}
+        <div className="mb-7">
+          <span className="font-bold block underline tracking-wider">
+            The Cube Agency
+          </span>
+        </div>
+        <span className="font-bold text-xl sm:text-2xl">Welcome</span>{" "}
+        <span className="text-lg">
+          to The Cube Agency, where we specialize in crafting dynamic websites
+          that not only represent{" "}
+          <span className="font-bold"> your business </span> but also catalyze
+          its
+          <span className="font-extrabold"> growth</span>.
+        </span>
+        {/* <span className="font-bold">full-stack developer's</span> with{" "}
         <span className="font-bold">3 years</span> of experience. We enjoy
         building <span className="italic">sites & apps</span>. Our focus is{" "}
-        <span className="">React (Next.js)</span>
+        <span className="">React (Next.js)</span> */}
       </motion.h1>
 
       <motion.div
@@ -133,13 +154,13 @@ const Intro = () => {
           className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border border-black/10 dark:bg-white/10 dark:text-white/60"
           target="_blank"
         >
-          <BsLinkedin />
+          <FaInstagram />
         </a>
         <a
           className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full text-[1.35rem] focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer border border-black/10 dark:bg-white/10 dark:text-white/60"
           target="_blank"
         >
-          <FaGithubSquare />
+          <FaFacebook />
         </a>
       </motion.div>
     </section>

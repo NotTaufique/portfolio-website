@@ -37,11 +37,12 @@ export const sendEmail = async (formData: FormData) => {
   try {
     await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>",
-      to: "shaikhmuhammadtaufique.rafique@gmail.com",
+      to: "theagencycube@gmail.com",
       subject: "Contact Form Submission",
       reply_to: sender as string,
       text: message as string,
     });
+   
   } catch (error: unknown) {
     if (error instanceof Error) {
       return {
